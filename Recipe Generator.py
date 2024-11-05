@@ -1,38 +1,49 @@
-def ing ():
-    dishes = ["Butter Chicken","Palak Paneer","Biryani","Tiramisu","Pesto Pasta","Fettuccine Alfredo","Bruschetta"]
-    print("||Dishes||")
+
+def ing():
+
+    dishes = ["Butter Chicken", "Palak Paneer", "Biryani", "Tiramisu", "Fettuccine Alfredo", "Bruschetta"]
+    print("|| Dishes ||")
     for dish in dishes:
         print(f"- {dish}")
     print("\n")
-    dish_rep = input("enter the dish: ").lower()
-    print(f"||{dish_rep.capitalize()}||")
-    if dish_rep.lower() == 'butter chicken':
-        recipes ={
+
+    
+    dish_rep = input("Enter the dish: ").lower() 
+    print(f"\n|| {dish_rep.capitalize()} ||")
+
+    if dish_rep == "butter chicken":
+        butter_chicken_recipe = {
             "Ingredients": [
-            "500g chicken, boneless",
-            "2 tablespoons butter",
-            "1 onion, chopped",
-            "2 tomatoes, pureed",
-            "1/2 cup cream",
-            "1 tablespoon ginger-garlic paste",
-            "2 teaspoons garam masala",
-            "Salt to taste",
-            "Fresh coriander for garnish"
-        ],
-        "Steps": [
-            "Sauté onions in butter until golden, then add ginger-garlic paste.",
-            "Add chicken and cook until no longer pink.",
-            "Stir in tomato puree, salt, and garam masala; cook for 15 mins.",
-            "Add cream, simmer for 5 mins, and garnish with coriander."]}
-        print("||Ingrediants||")
-        for ing in recipes["Ingredients"]:
+                "500g chicken, boneless",
+                "2 tablespoons butter",
+                "1 onion, chopped",
+                "2 tomatoes, pureed",
+                "1/2 cup cream",
+                "1 tablespoon ginger-garlic paste",
+                "2 teaspoons garam masala",
+                "Salt to taste",
+                "Fresh coriander for garnish"
+            ],
+            "Steps": [
+                "Sauté onions in butter until golden, then add ginger-garlic paste.",
+                "Add chicken and cook until no longer pink.",
+                "Stir in tomato puree, salt, and garam masala; cook for 15 mins.",
+                "Add cream, simmer for 5 mins, and garnish with coriander."
+            ],
+            "Cooking Time": "30 minutes"
+        }
+        
+        print("\n|| Ingredients ||")
+        for ing in butter_chicken_recipe["Ingredients"]:
             print(f"- {ing}")
-        print("\n")
-        print("||Steps||")
-        for steps in recipes["Steps"]:
-            print(f"{steps}")
-        print("\n")
-    elif dish_rep == 'palak paneer':
+        
+        print("\n|| Steps ||")
+        for step in butter_chicken_recipe["Steps"]:
+            print(step)
+        
+        print("\nCooking Time:", butter_chicken_recipe["Cooking Time"])
+
+    elif dish_rep == "palak paneer":
         palak_paneer_recipe = {
             "Ingredients": [
                 "250g paneer, cubed",
@@ -73,7 +84,8 @@ def ing ():
             print(step)
         
         print("\nCooking Time:", palak_paneer_recipe["Cooking Time"])
-    elif dish_rep == 'biryani':
+
+    elif dish_rep == "biryani":
         biryani_recipe = {
             "Ingredients": [
                 "500g basmati rice",
@@ -112,19 +124,18 @@ def ing ():
             ],
             "Cooking Time": "45 minutes (plus 30 minutes soaking)"
         }
-        
+
         print("\n|| Ingredients ||")
         for ing in biryani_recipe["Ingredients"]:
             print(f"- {ing}")
-            
+        
         print("\n|| Steps ||")
         for step in biryani_recipe["Steps"]:
             print(step)
-            
-        print("\n|| Cooking Time ||")
-        print(biryani_recipe["Cooking Time"])
+        
+        print("\nCooking Time:", biryani_recipe["Cooking Time"])
 
-    elif dish_rep.lower() == "tiramisu":
+    elif dish_rep == "tiramisu":
         tiramisu_recipe = {
             "Ingredients": [
                 "6 egg yolks",
@@ -150,21 +161,83 @@ def ing ():
             ],
             "Chill Time": "4 hours (overnight recommended)"
         }
-        
+
         print("\n|| Ingredients ||")
         for ing in tiramisu_recipe["Ingredients"]:
             print(f"- {ing}")
-            
+        
         print("\n|| Steps ||")
         for step in tiramisu_recipe["Steps"]:
             print(step)
-            
-        print("\n|| Chill Time ||")
-        print(tiramisu_recipe["Chill Time"])
+        
+        print("\nChill Time:", tiramisu_recipe["Chill Time"])
 
+    elif dish_rep == "fettuccine alfredo":
+        fettuccine_alfredo_recipe = {
+            "Ingredients": [
+                "300g fettuccine pasta",
+                "1 cup heavy cream",
+                "1/2 cup unsalted butter",
+                "1 cup grated Parmesan cheese",
+                "Salt to taste",
+                "Freshly ground black pepper, to taste",
+                "Fresh parsley, chopped (for garnish)"
+            ],
+            "Steps": [
+                "Cook the fettuccine pasta in a large pot of salted boiling water according to package instructions. Drain and set aside.",
+                "In a large skillet over medium heat, melt the butter and pour in the heavy cream. Stir to combine.",
+                "Simmer the mixture for about 5 minutes, until it thickens slightly.",
+                "Gradually whisk in the Parmesan cheese until the sauce is smooth and creamy.",
+                "Season with salt and pepper to taste.",
+                "Add the cooked fettuccine to the sauce, tossing to coat the pasta thoroughly.",
+                "Garnish with fresh parsley and serve immediately."
+            ],
+            "Cooking Time": "20 minutes"
+        }
 
-    
+        print("\n|| Ingredients ||")
+        for ing in fettuccine_alfredo_recipe["Ingredients"]:
+            print(f"- {ing}")
+        
+        print("\n|| Steps ||")
+        for step in fettuccine_alfredo_recipe["Steps"]:
+            print(f"{step}")
+
+        
+
+    elif dish_rep == "bruschetta":
+        bruschetta_recipe = {
+            "Ingredients": [
+                "1 baguette, sliced",
+                "3-4 ripe tomatoes, diced",
+                "2 cloves garlic, minced",
+                "1/4 cup fresh basil leaves, chopped",
+                "2 tablespoons olive oil",
+                "Salt and pepper to taste",
+                "Balsamic glaze (optional)"
+            ],
+            "Steps": [
+                "Toast baguette slices in the oven or on a grill until golden and crisp.",
+                "In a bowl, mix diced tomatoes, minced garlic, basil, olive oil, salt, and pepper.",
+                "Top each toasted baguette slice with the tomato mixture.",
+                "Drizzle with balsamic glaze if desired.",
+                "Serve immediately as an appetizer or snack."
+            ],
+            "Preparation Time": "15 minutes"
+        }
+
+        print("\n|| Ingredients ||")
+        for ing in bruschetta_recipe["Ingredients"]:
+            print(f"- {ing}")
+        
+        print("\n|| Steps ||")
+        for step in bruschetta_recipe["Steps"]:
+            print(step)
+        
+        print("\nPreparation Time:", bruschetta_recipe["Preparation Time"])
+
     else:
         print("Sorry, recipe not available for the entered dish.")
 
 ing()
+
